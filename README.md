@@ -28,8 +28,8 @@ There is a "MX-USBISP-V4.00" label on the back of the PCB, see the photo below. 
 
 3. Upload the prebuilt firmware in `./firmware/main.hex` and set the fuses to HFUSE=0xDD and LFUSE=0xFF.
 
-  avrdude -C ~/.arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf -b 19200 -c avrisp -p ATmega88P -P /dev/ttyUSB0 -U flash:w:firmware/main.hex
-  avrdude -C ~/.arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf -b 19200 -c avrisp -p ATmega88P -P /dev/ttyUSB0 -u -U hfuse:w:0xDD:m -U lfuse:w:0xFF:m
+        avrdude -C ~/.arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf -b 19200 -c avrisp -p ATmega88P -P /dev/ttyUSB0 -U flash:w:firmware/main.hex
+        avrdude -C ~/.arduino15/packages/arduino/tools/avrdude/6.3.0-arduino17/etc/avrdude.conf -b 19200 -c avrisp -p ATmega88P -P /dev/ttyUSB0 -u -U hfuse:w:0xDD:m -U lfuse:w:0xFF:m
 
 4. Disable self-programming jumper.
 
